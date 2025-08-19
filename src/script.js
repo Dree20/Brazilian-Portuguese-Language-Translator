@@ -3,7 +3,6 @@ function newLanguage(event) {
   new Typewriter("#new-word", {
     strings: "Como vai voce?",
     autoStart: true,
-    delay: 1,
     cursor: "",
   });
 }
