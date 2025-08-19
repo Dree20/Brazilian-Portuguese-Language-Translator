@@ -9,6 +9,7 @@
       href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&family=Intel+One+Mono:ital,wght@0,300..700;1,300..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playwrite+AU+QLD:wght@100..400&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <link rel="stylesheet" href="src/style.css" />
     <title>AI Language Translator</title>
   </head>
@@ -18,17 +19,17 @@
         <h1>Brazilian-Language-Translator</h1>
       </header>
       <main>
-        <form>
+        <form id="language-form">
           <input
             type="text"
-            placeholder="Enter an English word or sentence to be translated"
+            placeholder="Enter an English word or sentence that you would like to translate"
             autofocus="on"
             autocomplete="off"
             class="input-word"
           />
           <input type="submit" class="new-word-button" />
         </form>
-        <div class="new-word">Como vai voce?</div>
+        <div class="new-word" id="new-word"></div>
       </main>
       <footer>
         This AI project was code by
