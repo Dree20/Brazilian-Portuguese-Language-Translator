@@ -1,5 +1,4 @@
 function translateWords(response) {
-  console.log("words translated");
   new Typewriter("#new-word", {
     strings: response.data.answer,
     autoStart: true,
@@ -19,9 +18,6 @@ function newLanguage(event) {
   let newWordElement = document.querySelector("#new-word");
   newWordElement.innerHTML = `<div class="translating">Translating ${newWordInput.value} for you😁</div>`;
 
-  console.log("Generating poem");
-  console.log(`Prompt:${prompt}`);
-  console.log(`Context:${context}`);
   axios.get(apiUrl).then(translateWords);
 }
 let formElement = document.querySelector("#language-form");
