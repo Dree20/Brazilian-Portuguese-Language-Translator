@@ -1,5 +1,5 @@
 function translateWords(response) {
-  console.log("poem generated");
+  console.log("words translated");
   new Typewriter("#new-word", {
     strings: response.data.answer,
     autoStart: true,
@@ -15,6 +15,9 @@ function newLanguage(event) {
     " You are a Brazilian Portuguese language expert and are phemonomal at translating words and sentences. Your mission is to translate the words and short sentences entered. Please only show the translated word and sentence. Please follow the user instructions. Please sign the translation with a <br/> 'SheCodes AI'  at the bottom inside a <strong> element with font-size 20px";
   let prompt = ` User instructions are: Please translate ${newWordInput.value} to Brazilian Portuguese`;
   let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
+
+  let newWordElement = document.querySelector("#new-word");
+  newWordElement.innerHTML = `<div class="translating">Translating ${newWordInput.value} for you😁</div>`;
 
   console.log("Generating poem");
   console.log(`Prompt:${prompt}`);

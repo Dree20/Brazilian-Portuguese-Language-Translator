@@ -27,11 +27,14 @@ h1 {
   font-size: 45px;
   font-weight: 500;
 }
-form {
+.form-container {
   padding: 20px;
-  display: flex;
   margin-bottom: 20px;
 }
+form {
+  display: flex;
+}
+
 .input-word {
   width: 75%;
   padding: 15px;
@@ -55,6 +58,14 @@ form {
   color: #757575;
   font-family: "Roboto", sans-serif;
 }
+.example {
+  margin-left: 30px;
+  margin-top: 0;
+  color: white;
+  font-weight: 600;
+  line-height: 1.5;
+  font-size: 14px;
+}
 .new-word {
   margin-left: 50px;
   font-size: 30px;
@@ -62,13 +73,28 @@ form {
   font-weight: 400;
   line-height: 1.5;
 }
+
 .new-word strong {
   color: #2e65a5;
 }
+
 footer {
   margin-top: 15px;
   text-align: center;
   padding: 30px;
   color: white;
   font-weight: 400;
+}
+.translating {
+  animation: blink-animation 2s steps(5, start) infinite;
+}
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
 }
